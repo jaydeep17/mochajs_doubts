@@ -1,0 +1,16 @@
+{
+    "name": "mocha_done_multiple",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "node_modules/mocha/bin/mocha test/"
+    },
+    "author": "Jaydeep Solanki",
+    "license": "Public Domain",
+    "dependencies": {
+        "chai": "^1.10.0",
+        "express": "^4.11.2",
+        "mocha": "^2.1.0"
+    }
+}

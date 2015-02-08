@@ -1,0 +1,8 @@
+--ui bdd
+--require test/support/setup
+--reporter spec
+--no-colors
+--bail
+--trace
+--debug
+--check-leaks
