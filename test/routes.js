@@ -16,12 +16,12 @@ describe('routes', function() {
 
 
         it('client2 receives client1s msg', function(done) {
-            server.workingUrl(done);
+            server.testUrl(done);
         });
 
 
         it('client1 receives MSG_ACK', function(done) {
-            server.workingUrl(done);
+            server.testUrl(done);
         });
 
     }); // end `Message route` describe

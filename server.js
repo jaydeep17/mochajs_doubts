@@ -11,13 +11,6 @@ app.get('/', function(req, res) {
     res.send('hello world\n');
 });
 
-/**
- * Non Responsive route
- */
-app.get('/noresponse', function() {
-    //  no response
-});
-
 
 /**
  * Fire up the server
@@ -39,27 +32,12 @@ exports.close = function() {
 
 
 /**
- * Sends a request to the working URL and calls done
+ * Sends a request to the root URL and calls done
  * on response
  * @param {Function} done - the `done()` callback from mocha
  */
-exports.workingUrl = function(done) {
+exports.testUrl = function(done) {
     http.get('http://localhost:' + app._port, function(res) {
-        done();
-    }).on('error', function(e) {
-        done();
-    });
-};
-
-
-/**
- * Sends a request to the non responding URL and calls done
- * on response
- * @param {Function} done - the `done()` callback from mocha
- */
-exports.notWorkingUrl = function(done) {
-    console.log('--------------------------');
-    http.get('http://localhost:' + app._port + '/noresponse', function(res) {
         done();
     }).on('error', function(e) {
         done();

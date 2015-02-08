@@ -13,7 +13,7 @@ describe('Authentication', function() {
     });
 
     it('forbids unauthorized connection', function(done) {
-        server.workingUrl(done);
+        server.testUrl(done);
     });
 
 
@@ -21,7 +21,7 @@ describe('Authentication', function() {
     describe('Register mode', function() {
 
         it('allows connection in register mode', function(done) {
-            server.workingUrl(done);
+            server.testUrl(done);
         });
 
 
@@ -30,12 +30,12 @@ describe('Authentication', function() {
 
             /** Try commenting out this one */
             it('subscribe to registerMe/+', function(done) {
-                server.workingUrl(done);
+                server.testUrl(done);
             });
 
 
             it('rejects subscription to any other topic', function(done) {
-                server.workingUrl(done);
+                server.testUrl(done);
             });
 
 
@@ -43,11 +43,11 @@ describe('Authentication', function() {
             describe('register mode publish attempts', function() {
 
                 it('some other topic', function(done) {
-                    server.workingUrl(done);
+                    server.testUrl(done);
                 });
 
                 it('reject subscriptions to registerMe', function(done) {
-                    server.workingUrl(done);
+                    server.testUrl(done);
                 });
             }); // Layer 3 ends
 
